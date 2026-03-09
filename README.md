@@ -1,8 +1,6 @@
 # Voice View App
 
-Inspired by the tutorial ["Build and Deploy an ElevenLab Clone"](https://www.youtube.com/watch?v=e_MO-Rcz_MA), this project extracts and simplifies its frontend into a minimal app. It’s designed as a learning example for [TanStack Form](https://tanstack.com/form/latest), demonstrating how to compose a form with basic inputs such as text fields, selects, and sliders. It also shows how to play and visualize audio using [Wavesurfer.js](https://wavesurfer.xyz/).
-
-The project is built as a simple Next.js application. The AI and TTS parts are not included here—if you want to integrate them, you can refer to [Chatterbox TTS](https://modal.com/docs/examples/chatterbox_tts).
+Inspired by the tutorial ["Build and Deploy an ElevenLab Clone"](https://www.youtube.com/watch?v=e_MO-Rcz_MA), this project extracts and simplifies its frontend into a minimal app. It can be used as a learning example for [TanStack Form](https://tanstack.com/form/latest), demonstrating how to compose a form with basic inputs such as text fields, selects, and sliders. It also shows how to play and visualize audio using [Wavesurfer.js](https://wavesurfer.xyz/). The AI and TTS parts are not included. If you want to integrate them, you can refer to [Chatterbox TTS](https://modal.com/docs/examples/chatterbox_tts).
 
 ## TanStack Form
 
@@ -87,7 +85,7 @@ import { createFormHookContexts, createFormHook } from '@tanstack/react-form'
 export const { fieldContext, formContext, useFieldContext } =
   createFormHookContexts()
 
-const { useAppForm } = createFormHook({
+const { useAppForm, useTypedAppFormContext } = createFormHook({
   fieldContext,
   formContext,
   fieldComponents: {},
